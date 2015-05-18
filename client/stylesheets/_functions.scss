@@ -1,0 +1,9 @@
+@function rgba2rgb($color, $bg : 255) {
+  $a: alpha($color);
+
+  $r: ((1 - $a) * $bg) + ($a * red($color));
+  $g: ((1 - $a) * $bg) + ($a * green($color));
+  $b: ((1 - $a) * $bg) + ($a * blue($color));
+
+  @return rgb($r, $g, $b);
+}

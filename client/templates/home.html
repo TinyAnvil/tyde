@@ -1,0 +1,19 @@
+<template name="home">
+  {{#unless currentUser}}
+    {{> loginButtons}}
+  {{else}}
+    <ul class="message-list">
+      {{#each messages}}
+        <li class="message-item {{position sentBy}}">
+          <span class="message">{{message}}</span>
+          <span class="date">{{parseDate sentAt}}</span>
+        </li>
+      {{/each}}
+    </ul>
+
+    <form class="message-form">
+      <textarea rows="1" class="text" type="text" name="text" placeholder="Type a message..."></textarea>
+      <input class="submit" type="submit" name="submit" value="Send">
+    </form>
+  {{/unless}}
+</template>

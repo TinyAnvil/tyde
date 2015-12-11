@@ -50,6 +50,7 @@ body {
       float: left;
 
       .message {
+        transform: translate(calc(-100% + 18px), 0);
         background-color: rgba2rgb(rgba($secondary, 0.1));
         border-radius: 0 5px 5px 0;
         order: 1;
@@ -68,6 +69,7 @@ body {
       float: right;
 
       .message {
+        transform: translate(calc(100% - 18px), 0);
         background-color: rgba2rgb(rgba($active, 0.1));
         border-radius: 5px 0 0 5px;
         order: 0;
